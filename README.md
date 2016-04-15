@@ -147,7 +147,7 @@ router.get '/*', to: ->(env) { [200, {}, ["This is catch all: #{ env['router.par
 
 ```ruby
 router = Hanami::Router.new
-router.get '/hanami(.:format)' to: ->(env) { [200, {}, ["You've requested #{ env['router.params'][:format] }!"]] }
+router.get '/hanami(.:format)', to: ->(env) { [200, {}, ["You've requested #{ env['router.params'][:format] }!"]] }
 ```
 
 
